@@ -1,0 +1,21 @@
+{
+  "name": "exercise-tracker",
+  "version": "1.0.0",
+  "description": "fcc #4 API challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "cors": "^2.8.5",
+    "mongoose": "^5.4.19",
+    "body-parser": "^1.18.3",
+    "shortid": "^2.2.14",
+    "mongodb": "^3.1.11"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "license": "MIT"
+}

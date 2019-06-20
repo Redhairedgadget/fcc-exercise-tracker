@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise Tracker</title>
+    <meta name="description" content="fcc #4 API challenge">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body>
+    <div class = "wrapper">
+      <div class="forms">
+      <h1>
+        Exercise tracker
+      </h1>
+
+      <form action="/new-user" method="post">
+        <h3>Create a New User</h3>
+        <code>POST /new-user/</code>
+        <br>
+        <input name="username" type="text" maxlength="100" placeholder="Username">
+        <button type="submit">Create user</button>
+      </form>
+      
+      <form action="/add_exercise" method="post">
+        <h3>Add exercise</h3>
+        
+        <input type="text" name="userId" placeholder="userId*"><br>
+        <input type="text" name="description" placeholder="description*"><br>
+        <input type="number" name="duration" placeholder="duration(min.)*"><br>
+        <input type="date" name="date" placeholder="date (yyyy-mm-dd)"><br>
+        <br>
+        <button type="submit">Create exercise</button>
+      </form>
+        
+    <p>
+      Made by <a target = "_blank" href="https://codepen.io/redhairedgadget/">Redhairedgadget</a>.
+    </p>
+    </div>
+    <div class="board">
+      <p><strong>GET users's exercise log: <br><br></strong><code>GET /log/{userId}?start=[dateFrom]&finish=[dateTo]&limit=[limit]</code></p>
+      <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+      <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+    </div>
+      
+    </div>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
